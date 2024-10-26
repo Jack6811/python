@@ -15,7 +15,7 @@ def create_default_config():
     """创建默认的配置文件"""
     config = {
         "mode": "offline",
-        "rtsp_in": "rtsp://58.130.101.253/stream/0",
+        "rtsp_in": "rtsp://192.168.101.253/stream/0",
         "rtmp_put": "your_rtmps_server_address",
         "rtmp_put_password": "your_password",
         "updated_time": int(time.time())
