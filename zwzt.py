@@ -16,13 +16,7 @@ def md5(data):
     return md5.hexdigest()
 
 def getSecret():
-    userId = "0"
-    identity = 'h5'
-    salt = 'kOe&ac%YD5grq4Tk'
-    version = "5.7.24"
-    #print(userId + version + identity + salt)
-    Secret = md5(userId + version + identity + salt)
-    return Secret
+    pass
 
 def aes_decrypt(encrypt: str, key: str) -> str:
     encrypt = base64.b64decode(encrypt)
@@ -129,7 +123,7 @@ def getfile(id):
 if __name__ == '__main__':
     conn = sqlite3.connect('zwzt.db',check_same_thread=False)
     cursor = conn.cursor()
-    for i in range(20600,20800):#下一文件id：7754
+    for i in range(20600,20900):#下一文件id：7754
         print("下一文件id：" + str(i))
         getfile(i)
     cursor.close()
